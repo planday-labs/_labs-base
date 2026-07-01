@@ -1,0 +1,18 @@
+name: Deploy to production
+
+# Runs on every push to main (i.e. after a PR is merged).
+# Add your deployment steps below once the project is ready.
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-production:
+    name: Deploy to production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # TODO: add deployment steps
+      - name: Placeholder
+        run: echo "Production deployment not yet configured for this project."

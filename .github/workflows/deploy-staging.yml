@@ -1,0 +1,18 @@
+name: Deploy to staging
+
+# Runs on every pull request targeting main.
+# Add your deployment steps below once the project is ready.
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy-staging:
+    name: Deploy to staging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # TODO: add deployment steps
+      - name: Placeholder
+        run: echo "Staging deployment not yet configured for this project."
