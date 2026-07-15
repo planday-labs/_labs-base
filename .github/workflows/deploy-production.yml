@@ -33,6 +33,8 @@ jobs:
             --registry labsacrprod \
             --image ${{ env.APP_NAME }}:${{ github.sha }} \
             --image ${{ env.APP_NAME }}:latest \
+            --build-arg GITHUB_FEED=https://nuget.pkg.github.com/planday-corp/index.json \
+            --build-arg GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
             .
 
       - name: Deploy to production Container App
